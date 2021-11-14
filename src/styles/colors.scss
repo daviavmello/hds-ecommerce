@@ -1,0 +1,34 @@
+$primary: #FFFFFF;
+$primary-dark: #1A1A1A;
+
+$secondary: #0093E9;
+$secondary-dark: #0093E9;
+
+$tertiary: #1A1A1A;
+$tertiary-dark: #FFFFFF;
+
+$divider: #F5F5F5;
+$divider-dark: #333333;
+
+$medium: #525252;
+$medium-dark: #858585;
+
+$card:#E2E2E2;
+$card-dark:#858585;
+
+$success: #00A082;
+$success-dark: #00A082;
+
+$danger: #FF3200;
+$danger-dark: #FF3200;
+
+$colors: (
+  --primary: ($primary, $primary-dark),
+  --secondary: ($secondary, $secondary-dark),
+  --tertiary: ($tertiary, $tertiary-dark),
+  --divider: ($divider, $divider-dark),
+  --medium: ($medium, $medium-dark),
+  --card: ($card, $card-dark),
+  --success: ($success, $success-dark),
+  --danger: ($danger, $danger-dark),
+)
