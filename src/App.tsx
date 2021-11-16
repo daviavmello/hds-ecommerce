@@ -1,26 +1,28 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./styles/App.css";
+import { useState } from "react";
+import { StoreContext } from "./context/storeContext";
+import { Navbar } from "./Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App: React.FC = () => {
+  const [colorMode, setColorMode] = useState<string>(
+    localStorage.getItem("color-module") || "light"
   );
-}
+  const [badRequest, setBadRequest] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  return (
+    <StoreContext.Provider
+      value={{
+        colorMode,
+        setColorMode,
+        badRequest,
+        setBadRequest,
+        loading,
+        setLoading,
+      }}
+    >
+      <Navbar />
+    </StoreContext.Provider>
+  );
+};
 
 export default App;

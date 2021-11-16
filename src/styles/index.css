@@ -1,19 +1,36 @@
-@tailwind base;
+:root {
+  @apply light;
+}
 
-@tailwind components;
+.dark {
+  --color-primary: #2d3748;
+  --color-secondary: #283141;
+  --color-tertiary: #ffffff;
+  --color-medium: #e2e8f0;
+  --color-accent: #F59E0B;
+  --color-light-yellow: #FEF3C7;
+}
 
-@tailwind utilities;
+.light {
+  --color-primary: #ffffff;
+  --color-secondary: #edf2f7;
+  --color-tertiary: #2d3748;
+  --color-medium: #4a5568;
+  --color-accent: #F59E0B;
+  --color-light-yellow: #FEF3C7;
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Playfair Display', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
 }

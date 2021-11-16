@@ -1,0 +1,61 @@
+export const Logo: React.FC = () => (
+  <svg
+    width="34px"
+    height="33px"
+    viewBox="0 0 34 33"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <title>Logo</title>
+    <g
+      id="Page-1"
+      stroke="none"
+      stroke-width="1"
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g id="logo" transform="translate(-91.000000, -62.000000)">
+        <g id="Logo" transform="translate(91.728003, 62.397339)">
+          <rect
+            id="Rectangle"
+            fill="#FEF3C7"
+            x="2.27373675e-13"
+            y="0"
+            width="32.4560067"
+            height="32.4560067"
+            rx="6"
+          ></rect>
+          <circle
+            id="Oval"
+            fill="#F59E0B"
+            cx="5.67551008"
+            cy="5.67551008"
+            r="5.67551008"
+          ></circle>
+          <circle
+            id="Oval-Copy-2"
+            fill="#F59E0B"
+            cx="5.67551008"
+            cy="26.7804966"
+            r="5.67551008"
+          ></circle>
+          <circle
+            id="Oval-Copy-3"
+            fill="#F59E0B"
+            cx="26.7804966"
+            cy="26.7804966"
+            r="5.67551008"
+          ></circle>
+          <circle
+            id="Oval-Copy"
+            fill="#F59E0B"
+            cx="26.7804966"
+            cy="5.67551008"
+            r="5.67551008"
+          ></circle>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
