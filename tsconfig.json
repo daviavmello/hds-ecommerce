@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/logo/Logo.tsx", "src/logo/Wordmark.tsx"  ]
 }

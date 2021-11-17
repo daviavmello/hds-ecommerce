@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, Moon, Sun, X } from "react-feather";
-import { Logo } from "./Logo";
-import { Wordmark } from "./Wordmark";
+import { Logo } from "../logo/Logo";
+import { Wordmark } from "../logo/Wordmark";
 // import { Logo } from "./Logo";
 
 export const Navbar: React.FC = () => {

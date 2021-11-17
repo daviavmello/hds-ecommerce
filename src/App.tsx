@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StoreContext } from "./context/storeContext";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components/Navbar";
+import { Home } from "./screens/Home.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       }}
     >
       <Navbar />
+      <Home />
     </StoreContext.Provider>
   );
 };
