@@ -8,13 +8,7 @@ export const Wordmark: React.FC = () => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <title>Logo</title>
-    <g
-      id="Page-1"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-    >
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g id="Task-Manager-Copy" transform="translate(-135.000000, -68.000000)">
         <g id="Logo" transform="translate(135.197001, 68.577339)">
           <g>
@@ -60,7 +54,7 @@ export const Wordmark: React.FC = () => (
             id="Home-Design-Solution"
             transform="translate(26.565998, 0.700000)"
             fill="#F59E0B"
-            fill-rule="nonzero"
+            fillRule="nonzero"
           >
             <polygon
               id="H"

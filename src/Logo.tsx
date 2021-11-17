@@ -11,9 +11,9 @@ export const Logo: React.FC = () => (
     <g
       id="Page-1"
       stroke="none"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <g id="logo" transform="translate(-91.000000, -62.000000)">
         <g id="Logo" transform="translate(91.728003, 62.397339)">
