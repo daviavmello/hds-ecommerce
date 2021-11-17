@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Moon, Sun } from "react-feather";
+import { Menu, Moon, Sun, X } from "react-feather";
 import { Logo } from "./Logo";
 import { Wordmark } from "./Wordmark";
 // import { Logo } from "./Logo";
 
 export const Navbar: React.FC = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>();
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
   const handleColorMode = (color: string) => {
     localStorage.setItem("color-mode", color);
   };
@@ -21,6 +22,10 @@ export const Navbar: React.FC = () => {
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
+              <Menu
+                className="block h-6 w-6"
+                onClick={() => setOpenMenu((state) => !state)}
+              />
               <span className="sr-only">Open main menu</span>
             </button>
           </div>
@@ -70,38 +75,40 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className="sm:hidden" id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page"
-          >
-            About
-          </a>
+      {openMenu && (
+        <div className="sm:hidden" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="#"
+              className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page"
+            >
+              About
+            </a>
 
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Manufactures
-          </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Manufactures
+            </a>
 
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Services
-          </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Services
+            </a>
 
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Shop
-          </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Shop
+            </a>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
