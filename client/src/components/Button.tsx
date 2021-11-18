@@ -11,9 +11,7 @@ export const Button: React.FC<IButton> = ({ primary, secondary, value }) => {
       ${secondary && `border-2 border-accent text-tertiary`} 
       }`}
     >
-      <a href="#" className={`font-bold`}>
-        {value}
-      </a>
+      <div className={`font-bold`}>{value}</div>
     </div>
   );
 };
