@@ -6,9 +6,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <div className="container mx-auto px-32 py-4"> */}
     <App />
-    {/* </div> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

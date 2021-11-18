@@ -49,6 +49,11 @@ h2 {
   font-family: 'Playfair Display', serif;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 p {
   line-height: 1.8rem;
+  color: var(--color-medium);
 }
