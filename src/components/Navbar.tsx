@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu } from "react-feather";
 import { Logo } from "../logo/Logo";
 import { Wordmark } from "../logo/Wordmark";
-// import { Logo } from "./Logo";
+import { ColorModeToggle } from "./ColorModeToggle";
 
 export const Navbar: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -71,20 +71,7 @@ export const Navbar: React.FC = () => {
         <div className="block sm:hidden h-8 w-auto items-center self-center">
           <Logo />
         </div>
-        <div className="flex items-center">
-          <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-            <input
-              type="checkbox"
-              name="toggle"
-              id="toggle"
-              className="bg-accent border-accent mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
-            />
-            <label
-              htmlFor="toggle"
-              className="toggle-label block h-8 -ml-1 -mt-1 rounded-full bg-success cursor-pointer"
-            ></label>
-          </div>
-        </div>
+        <ColorModeToggle />
       </div>
 
       {openMenu && (
