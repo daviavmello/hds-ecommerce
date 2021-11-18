@@ -1,3 +1,9 @@
+import {
+  Routes,
+  Route,
+  useRoutes,
+  BrowserRouter as Router,
+} from "react-router-dom";
 import { useState } from "react";
 import { StoreContext } from "./context/storeContext";
 import { Navbar } from "./components/Navbar";
@@ -9,6 +15,11 @@ const App: React.FC = () => {
   );
   const [badRequest, setBadRequest] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const App = () => {
+    let routes = useRoutes([{ path: "/", element: <Home /> }]);
+    return routes;
+  };
 
   return (
     <StoreContext.Provider
@@ -22,7 +33,9 @@ const App: React.FC = () => {
       }}
     >
       <Navbar />
-      <Home />
+      <Router>
+        <App />
+      </Router>
     </StoreContext.Provider>
   );
 };

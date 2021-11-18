@@ -13,6 +13,12 @@ module.exports = {
       }),
       width: (theme) => ({
         "fit-content": "fit-content",
+        "screen-90": "90vw",
+        "screen-50": "50vw",
+        "screen-33": "calc(100vw / 3)",
+        "screen-25": "calc(100vw / 4)",
+        "screen-20": "calc(100vw / 5)",
+        "screen-10": "calc(100vw / 10)",
       }),
     },
     colors: {
