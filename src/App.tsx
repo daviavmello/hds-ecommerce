@@ -8,6 +8,7 @@ import { useState } from "react";
 import { StoreContext } from "./context/storeContext";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./screens/Home.screen";
+import { About } from "./screens/About.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -17,7 +18,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   const App = () => {
-    let routes = useRoutes([{ path: "/", element: <Home /> }]);
+    let routes = useRoutes([{ path: "/", element: <Home /> }, { path: "/about", element: <About /> }]);
     return routes;
   };
 

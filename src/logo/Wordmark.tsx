@@ -2,6 +2,7 @@ export const Wordmark: React.FC = () => (
   <svg
     width="227px"
     height="21px"
+    className="sm:w-48"
     viewBox="0 0 227 21"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

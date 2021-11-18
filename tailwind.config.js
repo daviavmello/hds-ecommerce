@@ -20,14 +20,15 @@ module.exports = {
         "screen-20": "calc(100vw / 5)",
         "screen-10": "calc(100vw / 10)",
       }),
-    },
-    colors: {
-      primary: "var(--color-primary)",
-      secondary: "var(--color-secondary)",
-      tertiary: "var(--color-tertiary)",
-      medium: "var(--color-medium)",
-      accent: "var(--color-accent)",
-      lightYellow: "var(--color-light-yellow)",
+      colors: {
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        tertiary: "var(--color-tertiary)",
+        medium: "var(--color-medium)",
+        accent: "var(--color-accent)",
+        lightYellow: "var(--color-light-yellow)",
+        success: "var(--color-success)",
+      },
     },
     backgroundImage: {
       homeImg: "url('/src/images/home.jpeg')",

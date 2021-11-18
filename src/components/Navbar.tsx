@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, Moon, Sun, X } from "react-feather";
+import { Menu } from "react-feather";
 import { Logo } from "../logo/Logo";
 import { Wordmark } from "../logo/Wordmark";
 // import { Logo } from "./Logo";
@@ -13,12 +13,12 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-primary">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-screen-10">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between">
+        <div className="flex items-center justify-between h-screen-10">
+          <div className="items-center sm:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="p-2 rounded-md text-tertiary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -26,15 +26,11 @@ export const Navbar: React.FC = () => {
                 className="block h-6 w-6"
                 onClick={() => setOpenMenu((state) => !state)}
               />
-              <span className="sr-only">Open main menu</span>
             </button>
           </div>
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex-1 flex items-center justify-center">
             <div className="flex-shrink-0 flex items-center">
-              <div className="block lg:hidden h-8 w-auto">
-                <Logo />
-              </div>
-              <div className="py-1 hidden lg:block h-8 w-auto self-end">
+              <div className="py-1 hidden sm:block h-8 w-auto self-end">
                 <Wordmark />
               </div>
             </div>
@@ -42,7 +38,7 @@ export const Navbar: React.FC = () => {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-tertiary px-3 py-2 rounded-md text-sm font-medium"
                   aria-current="page"
                 >
                   About
@@ -50,28 +46,44 @@ export const Navbar: React.FC = () => {
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-tertiary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Manufactures
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-tertiary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Services
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-tertiary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Shop
                 </a>
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
+        </div>
+        <div className="block sm:hidden h-8 w-auto items-center self-center">
+          <Logo />
+        </div>
+        <div className="flex items-center">
+          <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input
+              type="checkbox"
+              name="toggle"
+              id="toggle"
+              className="bg-accent border-accent mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
+            />
+            <label
+              htmlFor="toggle"
+              className="toggle-label block h-8 -ml-1 -mt-1 rounded-full bg-success cursor-pointer"
+            ></label>
+          </div>
         </div>
       </div>
 
@@ -80,7 +92,7 @@ export const Navbar: React.FC = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="#"
-              className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-tertiary block px-3 py-2 rounded-md text-base font-medium"
               aria-current="page"
             >
               About
@@ -88,21 +100,21 @@ export const Navbar: React.FC = () => {
 
             <a
               href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-tertiary block px-3 py-2 rounded-md text-base font-medium"
             >
               Manufactures
             </a>
 
             <a
               href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-tertiary block px-3 py-2 rounded-md text-base font-medium"
             >
               Services
             </a>
 
             <a
               href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-tertiary block px-3 py-2 rounded-md text-base font-medium"
             >
               Shop
             </a>
