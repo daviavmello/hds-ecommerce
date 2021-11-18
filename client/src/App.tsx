@@ -1,10 +1,4 @@
-import {
-  Routes,
-  Route,
-  useRoutes,
-  BrowserRouter as Router,
-  BrowserRouter,
-} from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { useState } from "react";
 import { StoreContext } from "./context/storeContext";
 import { Navbar } from "./components/Navbar";
@@ -17,14 +11,6 @@ const App: React.FC = () => {
   );
   const [badRequest, setBadRequest] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-
-  const App = () => {
-    let routes = useRoutes([
-      { path: "/", element: <Home /> },
-      { path: "/about", element: <About /> },
-    ]);
-    return routes;
-  };
 
   return (
     <StoreContext.Provider
