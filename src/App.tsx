@@ -3,6 +3,7 @@ import {
   Route,
   useRoutes,
   BrowserRouter as Router,
+  BrowserRouter,
 } from "react-router-dom";
 import { useState } from "react";
 import { StoreContext } from "./context/storeContext";
@@ -18,7 +19,10 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   const App = () => {
-    let routes = useRoutes([{ path: "/", element: <Home /> }, { path: "/about", element: <About /> }]);
+    let routes = useRoutes([
+      { path: "/", element: <Home /> },
+      { path: "/about", element: <About /> },
+    ]);
     return routes;
   };
 
@@ -33,9 +37,12 @@ const App: React.FC = () => {
         setLoading,
       }}
     >
-      <Navbar />
       <Router>
-        <App />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Router>
     </StoreContext.Provider>
   );
