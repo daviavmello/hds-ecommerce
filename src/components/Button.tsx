@@ -6,11 +6,12 @@ interface IButton {
 export const Button: React.FC<IButton> = ({ primary, secondary, value }) => {
   return (
     <div
-      className={`inline-flex shadow border-2 capitalize rounded-full ${
-        primary ? `border-accent` : `border-accent`
+      className={`shadow capitalize rounded-full w-fit-content self-center text-center py-2 px-6 cursor-pointer
+      ${primary && `bg-lightYellow text-accent`}
+      ${secondary && `border-2 border-accent text-tertiary`} 
       }`}
     >
-      <a href="#" className={`text-tertiary font-bold py-2 px-6 `}>
+      <a href="#" className={`font-bold`}>
         {value}
       </a>
     </div>

@@ -2,6 +2,19 @@ module.exports = {
   purge: [],
   darkMode: "class",
   theme: {
+    extend: {
+      height: (theme) => ({
+        "screen-90": "90vh",
+        "screen-50": "50vh",
+        "screen-33": "calc(100vh / 3)",
+        "screen-25": "calc(100vh / 4)",
+        "screen-20": "calc(100vh / 5)",
+        "screen-10": "calc(100vh / 10)",
+      }),
+      width: (theme) => ({
+        "fit-content": "fit-content",
+      }),
+    },
     colors: {
       primary: "var(--color-primary)",
       secondary: "var(--color-secondary)",
@@ -10,9 +23,10 @@ module.exports = {
       accent: "var(--color-accent)",
       lightYellow: "var(--color-light-yellow)",
     },
+    backgroundImage: {
+      homeImg: "url('/src/images/home.jpeg')",
+    },
   },
-  variants: {
-    extend: {},
-  },
+  variants: { display: ["responsive", "hover", "focus"] },
   plugins: [],
 };
