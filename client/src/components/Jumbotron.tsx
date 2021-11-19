@@ -6,6 +6,6 @@ export const Jumbotron: React.FC = () => (
       Bringing that at home feeling.
     </h2>
     <h4 className="my-4">Explore new design solutions for your home today.</h4>
-    <Button primary value={"see more"} />
+    <Button primary large value={"see more"} />
   </div>
 );

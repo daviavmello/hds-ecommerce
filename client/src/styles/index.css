@@ -3,10 +3,10 @@
 }
 
 .dark {
-  --color-primary: #2d3748;
-  --color-secondary: #283141;
+  --color-primary: #1a202c;
+  --color-secondary: #2d3748;
   --color-tertiary: #ffffff;
-  --color-medium: #e2e8f0;
+  --color-medium: #a0aec0;
   --color-accent: #F59E0B;
   --color-light-yellow: #FEF3C7;
   --color-success: #68d391;
@@ -14,9 +14,9 @@
 
 .light {
   --color-primary: #ffffff;
-  --color-secondary: #edf2f7;
+  --color-secondary: #f7fafc;
   --color-tertiary: #2d3748;
-  --color-medium: #4a5568;
+  --color-medium: #718096;
   --color-accent: #F59E0B;
   --color-light-yellow: #FEF3C7;
   --color-success: #68d391;
