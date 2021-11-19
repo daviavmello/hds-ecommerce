@@ -1,4 +1,5 @@
 import { FAQ } from "../components/FAQ";
+import { Locations } from "../components/Locations";
 
 export const About: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ export const About: React.FC = () => {
         </p>
       </div>
       <FAQ />
+      <Locations />
     </div>
   );
 };
-// grid-flow-col

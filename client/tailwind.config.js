@@ -32,6 +32,7 @@ module.exports = {
     },
     backgroundImage: {
       homeImg: "url('/src/images/home.jpeg')",
+      mapImg: "url('/src/images/map.png')",
     },
   },
   variants: { display: ["responsive", "hover", "focus"] },
