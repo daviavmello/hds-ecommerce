@@ -3,7 +3,7 @@ export const FAQ: React.FC = () => (
     <h3 className="font-bold text-center text-accent">
       Frequently Asked Questions
     </h3>
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pt-4 px-6">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pt-4 md:px-8 sm:px-2">
       <div>
         <h4 className="font-bold text-tertiary">
           What is included with a remodeling estimate?
