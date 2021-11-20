@@ -41,15 +41,15 @@ export const Products: React.FC = () => {
   return (
     <div className="py-6 rounded-xl mb-6">
       <h3 className="font-bold text-left text-accent md:px-8 px-2">Shop</h3>
-      <div className="grid grid-cols-1 pt-4 md:px-8 px-2">
+      <div className="pt-4 md:px-8 px-2">
         {products.map((v, i) => (
           <div key={i} className="text-left py-4 border-b border-secondary">
             <div className="flex flex-row justify-between">
               <div>
-                <p className="font-bold text-tertiary">{v.ProductDesc}</p>
-                <div className="flex justify-start items-center text-sm">
-                  <Truck className="mr-2 w-3 text-medium" />
-                  <p>${v.DeliveryFee}</p>
+                <p className="font-bold text-tertiary leading-none mb-2">{v.ProductDesc}</p>
+                <div className="flex justify-start items-center text-sm bg-tertiary w-fit-content rounded-full px-3">
+                  <Truck className="mr-2 w-3 text-primary" />
+                  <p className="text-primary">${v.DeliveryFee}</p>
                 </div>
               </div>
               <div className="flex justify-center items-center">
