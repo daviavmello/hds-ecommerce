@@ -33,7 +33,7 @@ export const Vendors: React.FC = () => {
         {manufactures.map((v, i) => (
           <div
             key={i}
-            className="text-center rounded-xl shadow-md px-2 py-4 md:p-4"
+            className="text-center rounded-xl shadow-md px-2 bg-primary py-4 md:p-4"
           >
             <p className="text-accent">{v.Name}</p>
             <div className="py-4">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 export const Jumbotron: React.FC = () => (
@@ -6,6 +7,8 @@ export const Jumbotron: React.FC = () => (
       Bringing that at home feeling.
     </h2>
     <h4 className="my-4">Explore new design solutions for your home today.</h4>
-    <Button primary large value={"see more"} />
+    <Link to="/about">
+      <Button primary large value={"see more"} />
+    </Link>
   </div>
 );
