@@ -24,9 +24,22 @@ const db = mysql.createConnection({
   database: "hds-ecommerce",
 });
 
-// GET
+// GET Vendors
 app.get("/vendors", (req, res) => {
   db.query("SELECT * FROM vendors", (err, result) => {
+    if (err) {
+      console.log(err);
+      res.send(err);
+    } else {
+      console.log(`GET: ${result}`);
+      res.send(result);
+    }
+  });
+});
+
+// GET Products
+app.get("/products", (req, res) => {
+  db.query("SELECT * FROM products", (err, result) => {
     if (err) {
       console.log(err);
       res.send(err);

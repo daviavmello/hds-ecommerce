@@ -5,24 +5,24 @@ export const Header: React.FC = () => {
   return (
     <>
       <Link to="/about">
-        <div className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
+        <button className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
           About
-        </div>
+        </button>
       </Link>
       <Link to="/manufactures">
-        <div className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
+        <button className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
           Manufactures
-        </div>
+        </button>
       </Link>
       <Link to="/services">
-        <div className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
+        <button className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
           Services
-        </div>
+        </button>
       </Link>
       <Link to="/shop">
-        <div className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
+        <button className="text-tertiary px-3 py-2 rounded-md text-sm font-medium">
           Shop
-        </div>
+        </button>
       </Link>
     </>
   );

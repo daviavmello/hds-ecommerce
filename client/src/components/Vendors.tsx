@@ -11,7 +11,6 @@ export const Vendors: React.FC = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       const res = await getVendors();
-      console.log(res);
 
       if (res.status >= 400) {
         setBadRequest(true);

@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./screens/Home.screen";
 import { About } from "./screens/About.screen";
 import { Manufactures } from "./screens/Manufactures.screen";
+import { Shop } from "./screens/Shop.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/manufactures" element={<Manufactures />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
       </Router>
     </StoreContext.Provider>
