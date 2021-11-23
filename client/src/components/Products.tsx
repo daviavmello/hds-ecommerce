@@ -26,8 +26,6 @@ export const Products: React.FC = () => {
     fetchProducts();
   }, [setBadRequest]);
 
-  console.log(cart);
-
   const handleOperation = (
     value: { ProductID: number },
     operationType: string
@@ -73,8 +71,6 @@ export const Products: React.FC = () => {
   };
 
   const handleShipping = () => {
-    console.log(cart.map((v) => v.DeliveryFee));
-
     return cart.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
   };
 
