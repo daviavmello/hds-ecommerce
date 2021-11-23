@@ -6,6 +6,7 @@ import { useStore } from "../context/storeContext";
 export const Products: React.FC = () => {
   const { setBadRequest } = useStore();
   const [products, setProducts] = useState<Array<any>>([]);
+  const [cart, setCart] = useState<Array<any>>([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,17 +26,56 @@ export const Products: React.FC = () => {
     fetchProducts();
   }, [setBadRequest]);
 
-  const handleOperation = (id: number, operation: string) => {
+  console.log(cart);
+
+  const handleOperation = (
+    value: { ProductID: number },
+    operationType: string
+  ) => {
+    const id = value.ProductID;
     setProducts((state) => {
-      return state.map((v, i) =>
+      return state.map((v) =>
         v.ProductID === id
           ? {
               ...v,
-              count: operation === "addition" ? v.count++ : v.count--,
+              count: operationType === "addition" ? v.count++ : v.count--,
             }
           : v
       );
     });
+  };
+
+  const addToCart = (value: {}) => {
+    setCart((state) => [...state, { ...value }]);
+  };
+
+  const removeFromCart = (value: { ProductID: number }) => {
+    const removedProduct = value.ProductID;
+    setCart((state) => {
+      const productIndex = state.findIndex(
+        (v) => v.ProductID === removedProduct
+      );
+      return state.filter((v, i) => i !== productIndex);
+    });
+  };
+
+  const handleAdd = (value: { ProductID: number }, operationType: string) => {
+    handleOperation(value, operationType);
+    addToCart(value);
+  };
+
+  const handleRemove = (
+    value: { ProductID: number },
+    operationType: string
+  ) => {
+    handleOperation(value, operationType);
+    removeFromCart(value);
+  };
+
+  const handleShipping = () => {
+    console.log(cart.map((v) => v.DeliveryFee));
+
+    return cart.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
   };
 
   return (
@@ -46,7 +86,9 @@ export const Products: React.FC = () => {
           <div key={i} className="text-left py-4 border-b border-secondary">
             <div className="flex flex-row justify-between">
               <div>
-                <p className="font-bold text-tertiary leading-none mb-2">{v.ProductDesc}</p>
+                <p className="font-bold text-tertiary leading-none mb-2">
+                  {v.ProductDesc}
+                </p>
                 <div className="flex justify-start items-center text-sm bg-tertiary w-fit-content rounded-full px-3">
                   <Truck className="mr-2 w-3 text-primary" />
                   <p className="text-primary">${v.DeliveryFee}</p>
@@ -56,7 +98,7 @@ export const Products: React.FC = () => {
                 <div className="pr-8 flex">
                   {" "}
                   <button
-                    onClick={() => handleOperation(v.ProductID, "subtraction")}
+                    onClick={() => handleRemove(v, "subtraction")}
                     disabled={v.count === 0 ? true : false}
                   >
                     <Minus className="text-medium w-4" />
@@ -67,9 +109,7 @@ export const Products: React.FC = () => {
                     readOnly
                     value={v.count}
                   />{" "}
-                  <button
-                    onClick={() => handleOperation(v.ProductID, "addition")}
-                  >
+                  <button onClick={() => handleAdd(v, "addition")}>
                     <Plus className="text-medium w-4" />
                   </button>
                 </div>{" "}
@@ -78,6 +118,14 @@ export const Products: React.FC = () => {
             </div>
           </div>
         ))}
+        {cart.length > 0 && (
+          <div className="flex flex-row justify-between py-4">
+            <p className="font-bold text-medium leading-none mb-2">Shipping:</p>
+            <p className="font-bold text-medium leading-none mb-2">
+              ${handleShipping()}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
