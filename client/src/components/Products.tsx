@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Truck, Plus, Minus } from "react-feather";
+import { Link } from "react-router-dom";
 import { getProducts } from "../api/storeHelper";
 import { useStore } from "../context/storeContext";
 import { Button } from "./Button";
 
 export const Products: React.FC = () => {
-  const { setBadRequest } = useStore();
+  const { setBadRequest, setStore } = useStore();
   const [products, setProducts] = useState<Array<any>>([]);
   const [cart, setCart] = useState<Array<any>>([]);
 
@@ -139,7 +140,9 @@ export const Products: React.FC = () => {
               </p>
             </div>
             <div className="my-4">
-              <Button primary large value={"checkout"} url={`/checkout`} />
+              <Link to ="/checkout">
+              <Button primary large value={"checkout"} />
+              </Link>
             </div>
           </>
         )}

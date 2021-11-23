@@ -13,6 +13,7 @@ const App: React.FC = () => {
   );
   const [badRequest, setBadRequest] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const [store, setStore] = useState<Array<any>>([]);
 
   return (
     <StoreContext.Provider
@@ -23,6 +24,8 @@ const App: React.FC = () => {
         setBadRequest,
         loading,
         setLoading,
+        store,
+        setStore,
       }}
     >
       <Router>

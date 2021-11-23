@@ -2,7 +2,7 @@ interface IButton {
   primary?: boolean;
   secondary?: boolean;
   value: string;
-  url?: string;
+  url?: string; 
   large?: boolean;
   small?: boolean;
 }
