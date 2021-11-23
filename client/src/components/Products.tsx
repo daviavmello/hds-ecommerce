@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Truck, Plus, Minus } from "react-feather";
 import { getProducts } from "../api/storeHelper";
 import { useStore } from "../context/storeContext";
+import { Button } from "./Button";
 
 export const Products: React.FC = () => {
   const { setBadRequest } = useStore();
@@ -74,6 +75,13 @@ export const Products: React.FC = () => {
     return cart.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
   };
 
+  const handleTotal = () => {
+    const allPrices = cart.map(({ Price }) => Price);
+
+    const totalPrice = allPrices.reduce((prev, curr) => prev + curr);
+    return new Intl.NumberFormat().format(totalPrice + handleShipping());
+  };
+
   return (
     <div className="py-6 rounded-xl mb-6">
       <h3 className="font-bold text-left text-accent md:px-8 px-2">Shop</h3>
@@ -115,12 +123,25 @@ export const Products: React.FC = () => {
           </div>
         ))}
         {cart.length > 0 && (
-          <div className="flex flex-row justify-between py-4">
-            <p className="font-bold text-medium leading-none mb-2">Shipping:</p>
-            <p className="font-bold text-medium leading-none mb-2">
-              ${handleShipping()}
-            </p>
-          </div>
+          <>
+            <div className="flex flex-row justify-between py-4">
+              <p className="font-bold text-medium leading-none mb-2">
+                Shipping:
+              </p>
+              <p className="font-bold text-medium leading-none mb-2">
+                ${handleShipping()}
+              </p>
+            </div>
+            <div className="flex flex-row justify-between py-4">
+              <p className="font-bold text-medium leading-none mb-2">Total:</p>
+              <p className="font-bold text-medium leading-none mb-2">
+                ${handleTotal()}
+              </p>
+            </div>
+            <div className="my-4">
+              <Button primary large value={"checkout"} url={`/checkout`} />
+            </div>
+          </>
         )}
       </div>
     </div>
