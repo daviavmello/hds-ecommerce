@@ -1,5 +1,5 @@
 export const Locations: React.FC = () => (
-  <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6 pt-4">
+  <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6 pt-4 bg-primary">
     <div className="hidden md:inline-block bg-mapImg bg-cover shadow-md"></div>
     <div>
       <h3 className="font-bold text-left text-accent">Locations</h3>

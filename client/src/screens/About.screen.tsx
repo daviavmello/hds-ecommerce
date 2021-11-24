@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
-import { FAQ } from "./FAQ.screen";
-import { Locations } from "./Locations.screen";
 
 export const About: React.FC = () => {
   return (
-    <div className="container mx-auto px-2 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-2 sm:px-6 lg:px-8 bg-primary">
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
         <h2 className="text-3xl leading-12 font-bold tracking-tight text-tertiary sm:text-4xl sm:leading-10 ">
           It all starts with <br />a great story.
@@ -44,7 +42,7 @@ export const About: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between bg-secondary mb-8 py-16 px-2 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row justify-between bg-secondary py-16 px-2 sm:px-6 lg:px-8">
         <div className="mb-4">
           <h4 className="font-bold text-left text-accent">Our Locations</h4>
           <p>Do not hesitate to swing by and say hello!</p>

@@ -16,7 +16,7 @@ export const Checkout: React.FC = () => {
     return new Intl.NumberFormat().format(totalPrice + handleShipping());
   };
   return (
-    <div className="py-6 rounded-xl mb-6">
+    <div className="py-6 bg-primary pb-6">
       <h3 className="font-bold text-left text-accent md:px-8 px-2">Checkout</h3>
       <div className="pt-4 md:px-8 px-2">
         {store.map((v, i) => (
@@ -29,8 +29,12 @@ export const Checkout: React.FC = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="pr-8 flex"> </div>{" "}
-                <span className="text-sm font-medium">${v.Price}</span>
-                <span className="text-sm font-medium ml-2">x{v.count}</span>
+                <span className="text-sm font-medium text-tertiary">
+                  ${v.Price}
+                </span>
+                <span className="text-sm font-medium text-tertiary ml-2">
+                  x{v.count}
+                </span>
               </div>
             </div>
           </div>

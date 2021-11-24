@@ -15,7 +15,7 @@ import { Locations } from "./screens/Locations.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
-    localStorage.getItem("color-module") || "light"
+    localStorage.getItem("color-mode") || "light"
   );
   const [badRequest, setBadRequest] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);

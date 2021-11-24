@@ -67,7 +67,7 @@ export const Products: React.FC = () => {
   };
 
   return (
-    <div className="py-6 rounded-xl mb-6">
+    <div className="py-6 pb-6 bg-primary">
       <h3 className="font-bold text-left text-accent md:px-8 px-2">Shop</h3>
       <div className="pt-4 md:px-8 px-2">
         {products.map((v, i) => {
@@ -102,7 +102,7 @@ export const Products: React.FC = () => {
                       <Plus className="text-medium w-4" />
                     </button>
                   </div>{" "}
-                  <span className="text-sm font-medium">${v.Price}</span>
+                  <span className="text-sm text-tertiary font-medium">${v.Price}</span>
                 </div>
               </div>
             </div>

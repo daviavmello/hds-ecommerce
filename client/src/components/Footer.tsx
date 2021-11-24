@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Wordmark } from "../logo/Wordmark";
 
 export const Footer: React.FC = () => (
-  <footer className="body-font">
+  <footer className="body-font bg-primary">
     <div
       className="
       container

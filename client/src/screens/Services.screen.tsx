@@ -1,6 +1,6 @@
 export const Services: React.FC = () => {
   return (
-    <div className="py-6 rounded-xl mb-6">
+    <div className="py-6 pb-6 bg-primary">
       <h3 className="font-bold text-left text-accent md:px-8 px-2">
         Services & Fees
       </h3>

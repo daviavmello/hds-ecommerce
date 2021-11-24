@@ -9,10 +9,6 @@ import { Header } from "./Header";
 export const Navbar: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-  const handleColorMode = (color: string) => {
-    localStorage.setItem("color-mode", color);
-  };
-
   return (
     <nav className="bg-primary sticky top-0">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between">

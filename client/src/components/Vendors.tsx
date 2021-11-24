@@ -24,7 +24,7 @@ export const Vendors: React.FC = () => {
     fetchVendors();
   }, [setBadRequest]);
   return (
-    <div className="py-6 bg-secondary rounded-xl mb-6">
+    <div className="py-6 bg-secondary">
       <h3 className="font-bold text-center text-accent">Brands</h3>
       <h4 className="text-center text-tertiary">
         We work with the best brands available.
