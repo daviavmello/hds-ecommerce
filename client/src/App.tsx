@@ -8,6 +8,7 @@ import { Manufactures } from "./screens/Manufactures.screen";
 import { Shop } from "./screens/Shop.screen";
 import { Checkout } from "./screens/Checkout.screen";
 import { Receipt } from "./screens/Receipt.screen";
+import { Services } from "./screens/Services.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -36,6 +37,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/manufactures" element={<Manufactures />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/receipt" element={<Receipt />} />
