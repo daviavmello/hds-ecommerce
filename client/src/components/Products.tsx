@@ -41,39 +41,29 @@ export const Products: React.FC = () => {
     setProducts(newState);
   };
 
-  const addToCart = (value: { ProductID: number }) => {
+  const handleCart = (value: { ProductID: number }, operationType: string) => {
     const id = value.ProductID;
     const newCart = [...cart];
     const currObj = newCart.find((v) => v.ProductID === id);
-    if (currObj) {
+    if (currObj && operationType === "addition") {
       currObj.count += 1;
       setCart(newCart);
-    } else {
+    } else if (operationType === "addition") {
       setCart((state) => [...state, { ...value }]);
+    } else if (operationType === "subtraction" && currObj.count > 1) {
+      currObj.count -= 1;
+    } else {
+      const productIndex = newCart.findIndex((v) => v.ProductID === id);
+      setCart(newCart.filter((v, i) => i !== productIndex));
     }
   };
 
-  const removeFromCart = (value: { ProductID: number }) => {
-    const removedProduct = value.ProductID;
-    setCart((state) => {
-      const productIndex = state.findIndex(
-        (v) => v.ProductID === removedProduct
-      );
-      return state.filter((v, i) => i !== productIndex);
-    });
-  };
-
-  const handleAdd = (value: { ProductID: number }, operationType: string) => {
-    handleOperation(value, operationType);
-    addToCart(value);
-  };
-
-  const handleRemove = (
+  const handleProduct = (
     value: { ProductID: number },
     operationType: string
   ) => {
     handleOperation(value, operationType);
-    removeFromCart(value);
+    handleCart(value, operationType);
   };
 
   return (
@@ -97,7 +87,7 @@ export const Products: React.FC = () => {
                   <div className="pr-8 flex">
                     {" "}
                     <button
-                      onClick={() => handleRemove(v, "subtraction")}
+                      onClick={() => handleProduct(v, "subtraction")}
                       disabled={v.count === 0 ? true : false}
                     >
                       <Minus className="text-medium w-4" />
@@ -108,7 +98,7 @@ export const Products: React.FC = () => {
                       readOnly
                       value={v.count}
                     />{" "}
-                    <button onClick={() => handleAdd(v, "addition")}>
+                    <button onClick={() => handleProduct(v, "addition")}>
                       <Plus className="text-medium w-4" />
                     </button>
                   </div>{" "}
