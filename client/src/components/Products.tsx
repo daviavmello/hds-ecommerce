@@ -6,7 +6,7 @@ import { useStore } from "../context/storeContext";
 import { Button } from "./Button";
 
 export const Products: React.FC = () => {
-  const { setBadRequest } = useStore();
+  const { setBadRequest, setStore } = useStore();
   const [products, setProducts] = useState<Array<any>>([]);
   const [cart, setCart] = useState<Array<any>>([]);
 
@@ -112,7 +112,12 @@ export const Products: React.FC = () => {
           <>
             <div className="my-4">
               <Link to="/checkout">
-                <Button primary large value={"checkout"} addToCart={cart} />
+                <Button
+                  primary
+                  large
+                  value={"checkout"}
+                  onClick={() => setStore(cart)}
+                />
               </Link>
             </div>
           </>

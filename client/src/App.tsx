@@ -7,6 +7,7 @@ import { About } from "./screens/About.screen";
 import { Manufactures } from "./screens/Manufactures.screen";
 import { Shop } from "./screens/Shop.screen";
 import { Checkout } from "./screens/Checkout.screen";
+import { Receipt } from "./screens/Receipt.screen";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -37,6 +38,7 @@ const App: React.FC = () => {
           <Route path="/manufactures" element={<Manufactures />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/receipt" element={<Receipt />} />
         </Routes>
       </Router>
     </StoreContext.Provider>

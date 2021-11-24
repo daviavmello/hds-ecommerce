@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
+import { Button } from "../components/Button";
 import { useStore } from "../context/storeContext";
 
 export const Checkout: React.FC = () => {
-  const { store } = useStore();
-
-  console.log(store);
+  const { store, setStore } = useStore();
 
   const handleShipping = () => {
     return store.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
@@ -46,6 +46,19 @@ export const Checkout: React.FC = () => {
           <p className="font-bold text-medium leading-none mb-2">
             ${handleTotal()}
           </p>
+        </div>
+        <div className="my-4 flex flex-row justify-between">
+          <Link to="/receipt">
+            <Button primary large value={"confirm"} />
+          </Link>
+          <Link to="/shop">
+            <Button
+              secondary
+              large
+              value={"Empty Cart"}
+              onClick={() => setStore([])}
+            />
+          </Link>
         </div>
       </div>
     </div>
