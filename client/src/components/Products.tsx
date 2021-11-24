@@ -94,7 +94,7 @@ export const Products: React.FC = () => {
                     </button>
                     <input
                       type="text"
-                      className="focus:outline-none bg-secondary h-6 w-8 rounded text-sm px-2 mx-2 text-center"
+                      className="focus:outline-none bg-secondary h-6 w-8 rounded text-sm text-tertiary px-2 mx-2 text-center"
                       readOnly
                       value={v.count}
                     />{" "}

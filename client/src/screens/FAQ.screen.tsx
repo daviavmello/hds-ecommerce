@@ -5,7 +5,7 @@ export const FAQ: React.FC = () => (
     </h3>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pt-4 md:px-8 px-2">
       <div>
-        <h4 className="font-bold text-tertiary">
+        <h4 className="font-semibold text-accent">
           What is included with a remodeling estimate?
         </h4>
         <p className="text-justify">
@@ -18,7 +18,7 @@ export const FAQ: React.FC = () => (
         </p>
       </div>
       <div>
-        <h4 className="font-bold text-tertiary">
+        <h4 className="font-semibold text-accent">
           Will I need to pay for a design agreement?
         </h4>
         <p className="text-justify">
@@ -29,7 +29,7 @@ export const FAQ: React.FC = () => (
         </p>
       </div>
       <div>
-        <h4 className="font-bold text-tertiary">
+        <h4 className="font-semibold text-accent">
           What is the difference between an estimate and a design agreement?
         </h4>
         <p className="text-justify">
@@ -40,7 +40,7 @@ export const FAQ: React.FC = () => (
         </p>
       </div>
       <div>
-        <h4 className="font-bold text-tertiary">
+        <h4 className="font-semibold text-accent">
           How long will my project take?
         </h4>
         <p className="text-justify">
@@ -51,7 +51,7 @@ export const FAQ: React.FC = () => (
         </p>
       </div>
       <div>
-        <h4 className="font-bold text-tertiary">Do you use subcontractors?</h4>
+        <h4 className="font-semibold text-accent">Do you use subcontractors?</h4>
         <p className="text-justify">
           We employ both subcontractors and hourly employees who are on our
           payroll. The subcontractors we work with have all worked with us for
@@ -61,7 +61,7 @@ export const FAQ: React.FC = () => (
         </p>
       </div>
       <div>
-        <h4 className="font-bold text-tertiary">
+        <h4 className="font-semibold text-accent">
           Will there be a big mess during our project?
         </h4>
         <p className="text-justify">
