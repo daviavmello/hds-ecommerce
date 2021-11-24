@@ -50,61 +50,6 @@ app.get("/products", (req, res) => {
   });
 });
 
-// POST
-// app.post("/createtodo", (req, res) => {
-//   console.log(`POST: ${req.body.todo_task}`);
-//   const task = req.body.todo_task;
-//   const status = req.body.status;
-//   const index = req.body.index_task;
-
-//   // question mark in parenthesis and value in array to avoid data injection
-//   db.query(
-//     "INSERT INTO todo (todo_task, status, index_task) VALUES (?, ?, ?)",
-//     [task, status, index],
-//     (err, result) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.send("Task inserted");
-//       }
-//     }
-//   );
-// });
-
-// // PUT
-// app.put("/todo/:id", (req, res) => {
-//   const id = req.body.todo_id;
-//   const task = req.body.todo_task;
-//   const status = req.body.status;
-//   const index = req.body.index_task;
-
-//   db.query(
-//     "UPDATE todo SET ?, ?, ? WHERE todo_id = ?",
-//     [{ todo_task: task }, { status: status }, { index_task: index }, id],
-//     (err, result) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.send("Task updated");
-//       }
-//     }
-//   );
-// });
-
-// // DELETE
-// app.delete("/todo/:id", (req, res) => {
-//   console.log(`DELETE: ${req.params.id}`);
-//   const taskId = req.params.id;
-//   db.query("DELETE FROM todo WHERE todo_id = (?)", [taskId], (err, result) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.send("Task deleted");
-//       console.log(`Sucessfully deleted ${taskId} from todo table`);
-//     }
-//   });
-// });
-
 app.listen(process.env.PORT || PORT, () => {
   console.log(`running on port ${PORT}`);
 });
