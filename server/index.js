@@ -9,20 +9,20 @@ app.use(cors());
 // middleware to tell Express to break requests in JSON format
 app.use(express.json());
 
-// const db = mysql.createPool({
-//   connectionLimit: 10,
-//   user: "b6e37d5a8c1cbf",
-//   host: "us-cdbr-east-03.cleardb.com",
-//   password: "0262edac",
-//   database: "heroku_9aa12b8a5f2ac2d",
-// });
-
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "050994.Dm",
-  database: "hds-ecommerce",
+const db = mysql.createPool({
+  connectionLimit: 10,
+  user: "b2ec8c5b8da72d",
+  host: "us-cdbr-east-04.cleardb.com",
+  password: "5d337e16",
+  database: "heroku_4b93c43ec6cec9b",
 });
+
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "050994.Dm",
+//   database: "hds-ecommerce",
+// });
 
 // GET Vendors
 app.get("/vendors", (req, res) => {
