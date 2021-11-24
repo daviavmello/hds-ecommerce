@@ -1,5 +1,7 @@
-import { FAQ } from "../components/FAQ";
-import { Locations } from "../components/Locations";
+import { Link } from "react-router-dom";
+import { Button } from "../components/Button";
+import { FAQ } from "./FAQ.screen";
+import { Locations } from "./Locations.screen";
 
 export const About: React.FC = () => {
   return (
@@ -29,8 +31,30 @@ export const About: React.FC = () => {
           hired since have acquired kitchen and bath design certifications.
         </p>
       </div>
-      <FAQ />
-      <Locations />
+      <div className="flex flex-col md:flex-row justify-between bg-secondary mb-8 py-16 px-2 sm:px-6 lg:px-8">
+        <div className="mb-4">
+          <h4 className="font-bold text-left text-accent">
+            Most Frequently Asked Questions
+          </h4>
+          <p>We provide answers to your most common questions.</p>
+        </div>
+        <div className="self-center">
+          <Link to="/faq">
+            <Button secondary small value={"see more"} />
+          </Link>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between bg-secondary mb-8 py-16 px-2 sm:px-6 lg:px-8">
+        <div className="mb-4">
+          <h4 className="font-bold text-left text-accent">Our Locations</h4>
+          <p>Do not hesitate to swing by and say hello!</p>
+        </div>
+        <div className="self-center">
+          <Link to="/locations">
+            <Button secondary small value={"see more"} />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
