@@ -12,9 +12,9 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $100 per hour; minimum of $500 per job (includes onsite visits).
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -24,9 +24,9 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $75 per hour; minimum of $1,500 per kitchen.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -36,9 +36,9 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $75 per hour; minimum of $750 per kitchen.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -48,9 +48,9 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $85 per hour; minimum of $500 per kitchen.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -60,9 +60,9 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $85 per hour; minimum of $500 per kitchen.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -72,11 +72,11 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               Contracted to outside painting contractor (AZ Design). They charge
               a minimum of $500 to paint a kitchen and $40 per hour to hang
               wallpaper. The client meets with the sub-contractor for details.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -86,11 +86,11 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               Moving walls, sheetrock, framing, windows, etc. Some of this work
               is contracted out if needed, but normal charges are $60.00 per
               hour for labor.
-            </span>
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -100,12 +100,12 @@ export const Services: React.FC = () => {
             </p>
           </div>
           <div className="items-baseline text-justify">
-            <span className="text-sm font-medium">
+            <p className="text-sm text-medium font-medium">
               $50 minimum on 1st piece and then $25 for each extra piece. Large
               items will incur a $100 surcharge for delivery. Any installation
               required will be charged at the standard hourly rate of $85 per
               hour.
-            </span>
+            </p>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { Shop } from "./screens/Shop.screen";
 import { Checkout } from "./screens/Checkout.screen";
 import { Receipt } from "./screens/Receipt.screen";
 import { Services } from "./screens/Services.screen";
+import { Footer } from "./components/Footer";
 
 const App: React.FC = () => {
   const [colorMode, setColorMode] = useState<string>(
@@ -42,6 +43,7 @@ const App: React.FC = () => {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/receipt" element={<Receipt />} />
         </Routes>
+        <Footer />
       </Router>
     </StoreContext.Provider>
   );
