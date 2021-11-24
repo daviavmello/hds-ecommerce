@@ -46,7 +46,9 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="block sm:hidden h-8 w-auto items-center self-center">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <ColorModeToggle />
       </div>
