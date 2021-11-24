@@ -37,7 +37,7 @@ app.get("/vendors", (req, res) => {
   });
 });
 
-// GET Products
+// GET Products 
 app.get("/products", (req, res) => {
   db.query("SELECT * FROM products", (err, result) => {
     if (err) {
