@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { postOrder } from "../api/storeHelper";
 import { Button } from "../components/Button";
 import { useStore } from "../context/storeContext";
 
@@ -9,9 +10,6 @@ export const Checkout: React.FC = () => {
     return store.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
   };
 
-  console.log(store);
-  
-
   const handleTotal = () => {
     const allPrices = store.map(({ Price }) => Price);
 
@@ -20,7 +18,10 @@ export const Checkout: React.FC = () => {
   };
 
   const handleSubmit = () => {
-
+    const orderId = Math.floor(Math.random() * 90000) + 10000;
+    store.forEach((v) => {
+      postOrder(v, orderId);
+    });
     setStore([]);
   };
   return (
@@ -61,14 +62,19 @@ export const Checkout: React.FC = () => {
         </div>
         <div className="my-4 flex flex-row justify-between">
           <Link to="/receipt">
-            <Button primary large value={"confirm"} />
+            <Button
+              primary
+              large
+              value={"confirm"}
+              onClick={() => handleSubmit()}
+            />
           </Link>
           <Link to="/shop">
             <Button
               secondary
               large
               value={"Empty Cart"}
-              onClick={() => handleSubmit()}
+              onClick={() => setStore([])}
             />
           </Link>
         </div>

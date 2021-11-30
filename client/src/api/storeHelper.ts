@@ -22,12 +22,14 @@ export const getProducts = async () => {
   }
 };
 
-export const postOrder = async (store: {
-  ProductID: number;
-  Price: number;
-  count: number;
-}) => {
-  const orderId = Math.floor(Math.random() * 90000) + 10000;
+export const postOrder = async (
+  store: {
+    ProductID: number;
+    Price: number;
+    count: number;
+  },
+  orderId: number
+) => {
   await axios
     .post(`https://hds-ecommerce.herokuapp.com/order_details`, {
       OrderID: orderId,
