@@ -20,7 +20,7 @@ const db = mysql.createPool({
 // const db = mysql.createConnection({
 //   host: "localhost",
 //   user: "root",
-//   password: "050994.Dm",
+//   password: "",
 //   database: "hds-ecommerce",
 // });
 
@@ -46,6 +46,23 @@ app.get("/products", (req, res) => {
     } else {
       console.log(`GET: ${result}`);
       res.send(result);
+    }
+  });
+});
+
+// POST
+app.post("/order_details", (req, res) => {
+  console.log(`POST: ${req.body.todo_task}`);
+  const task = req.body.todo_task;
+  const status = req.body.status;
+  const index = req.body.index_task;
+
+  // question mark in parenthesis and value in array to avoid data injection
+  db.query("INSERT INTO orders (todo_task, status, index_task) VALUES (?, ?, ?)", [task, status, index], (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send("New order in");
     }
   });
 });

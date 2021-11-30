@@ -9,11 +9,19 @@ export const Checkout: React.FC = () => {
     return store.map((v) => v.DeliveryFee).sort((a, b) => b - a)[0];
   };
 
+  console.log(store);
+  
+
   const handleTotal = () => {
     const allPrices = store.map(({ Price }) => Price);
 
     const totalPrice = allPrices.reduce((prev, curr) => prev + curr, 0);
     return new Intl.NumberFormat().format(totalPrice + handleShipping());
+  };
+
+  const handleSubmit = () => {
+
+    setStore([]);
   };
   return (
     <div className="py-6 bg-primary pb-6">
@@ -60,7 +68,7 @@ export const Checkout: React.FC = () => {
               secondary
               large
               value={"Empty Cart"}
-              onClick={() => setStore([])}
+              onClick={() => handleSubmit()}
             />
           </Link>
         </div>
