@@ -33,6 +33,11 @@ module.exports = {
     backgroundImage: {
       homeImg: "url('/src/images/home.jpeg')",
       mapImg: "url('/src/images/map.png')",
+      bathImg: "url('/src/images/bath.jpg')",
+      kitchenImg: "url('/src/images/kitchen.jpeg')",
+    },
+    backgroundPosition: {
+      "bottom-16": "center top 20rem",
     },
   },
   variants: { display: ["responsive", "hover", "focus"] },
